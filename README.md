@@ -2,6 +2,12 @@
 
 > A Single Page Application using Vue that generates random Clash Royale decks using the [Clash Royale API](https://github.com/martincarrera/clash-royale-api).
 
+## In this project we used
+* [NodeJS](https://nodejs.org/en/)
+* [npm](https://www.npmjs.com/)
+* [Vue](https://vuejs.org/)
+* [Clash Royale API](https://github.com/martincarrera/clash-royale-api)
+
 ## Requirements
 
 * [NodeJs](https://nodejs.org/en/)
