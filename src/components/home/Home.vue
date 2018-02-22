@@ -17,7 +17,7 @@
         </ul>
       </div>
       <div class="col-md-2">
-        <h1 class="info-title">About this deck</h1>
+        <h1><span class="info-title">About this deck</span></h1>
 
         <p class="info-text"><b>Elixir Cost:</b> {{ deckElixirCost }}</p>
         <p class="info-text"><b>Deck for Arena:</b> {{ maxArena }}</p>
@@ -98,7 +98,6 @@ export default {
   methods: {
 
     newDeck(foto) {
-
       this.service
         .list()
         .then(deck => this.deck = deck, err => this.mensagem = err.message);
@@ -127,15 +126,6 @@ export default {
 </script>
 
 <style>
-
-  .center {
-    text-align: center;
-  }
-
-  .right {
-    text-align: right;
-  }
-
   .list-deck {
     list-style: none;
   }
@@ -145,14 +135,4 @@ export default {
     overflow: hidden;
   }
 
-  .info-title {
-    font-weight: bold;
-    border-bottom: solid 5px red;
-    font-family: helvetica, sans-serif;
-  }
-
-  .info-text {
-    font-size: 1.4em;
-    font-family: helvetica, sans-serif;
-  }
 </style>

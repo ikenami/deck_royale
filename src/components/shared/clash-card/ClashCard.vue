@@ -1,6 +1,6 @@
 <template>
   <div class="card-image" :class="rarityStyle">
-    <p class="card-title center">{{name}}</p>
+    <p class="card-title center"><span>{{name}}</span></p>
     <img class="img-responsive" :src="url" :alt="idName">
   </div>
 </template>
@@ -25,9 +25,6 @@ export default {
 </script>
 
 <style scoped>
-.center {
-  text-align: center;
-}
 .card-title {
   font-weight: bold;
 }
@@ -44,23 +41,28 @@ export default {
   height: auto;
 }
 
-.rarity-default {
-  /* border-bottom: solid 5px grey; */
-  color: grey;
+
+.rarity-default span{
+  border-bottom: solid 3px grey;
+  color: black;
+  /* color: grey; */
 }
 
-.rarity-rare {
-  /* border-bottom: solid 5px orange; */
-  color: orange;
+.rarity-rare span{
+  border-bottom: solid 3px orange;
+  color: black;
+  /* color: orange; */
 }
 
-.rarity-epic {
-  /* border-bottom: solid 5px purple; */
-  color: purple;
+.rarity-epic span{
+  border-bottom: solid 3px purple;
+  color: black;
+  /* color: purple; */
 }
 
-.rarity-legend {
-  /* border-bottom: solid 5px blue; */
-  color: blue;
+.rarity-legend span{
+  border-bottom: solid 3px blue;
+  color: black;
+  /* color: blue; */
 }
 </style>
