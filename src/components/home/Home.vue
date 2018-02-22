@@ -17,89 +17,29 @@
         </ul>
       </div>
       <div class="col-md-2">
-        <h1><span class="info-title">About this deck</span></h1>
-
-        <p class="info-text"><b>Elixir Cost:</b> {{ deckElixirCost }}</p>
-        <p class="info-text"><b>Deck for Arena:</b> {{ maxArena }}</p>
-        <p class="info-text"><b>Common Cards:</b> {{ countCommonCards }}</p>
-        <p class="info-text"><b>Rare Cards:</b> {{ countRareCards }}</p>
-        <p class="info-text"><b>Epic Cards:</b> {{ countEpicCards }}</p>
-        <p class="info-text"><b>Legendary Cards:</b> {{ countLegenCards }}</p>
-
+        <about-deck :deck="this.deck"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import AboutDeck from './AboutDeck.vue';
 import ClashCard from '../shared/clash-card/ClashCard.vue';
 import ClashService from '../../domain/clash/ClashService';
 
 export default {
 
   components: {
-    'clash-card': ClashCard
+    'clash-card': ClashCard,
+    'about-deck': AboutDeck
   },
-  computed: {
-    deckElixirCost() {
-      let totalElixir = 0;
-      console.log(this.deck);
-      this.deck.forEach(function(item, index, arr){
-        totalElixir += item.elixirCost;
-      });
-      return Math.round(totalElixir/8*10)/10;
-    },
-    maxArena() {
-      let arena = 0;
-      this.deck.forEach(function(item, index, arr){
-        if (item.arena > arena) {
-          arena = item.arena;
-        }
-      });
-      return arena;
-    },
-    countCommonCards() {
-      let common = 0;
-      this.deck.forEach(function(item,index,arr){
-        if (item.rarity == "Common"){
-          common += 1;
-        }
-      });
-      return common;
-    },
-    countRareCards() {
-      let rare = 0;
-      this.deck.forEach(function(item,index,arr){
-        if (item.rarity == "Rare"){
-          rare += 1;
-        }
-      });
-      return rare;
-    },
-    countEpicCards() {
-      let epic = 0;
-      this.deck.forEach(function(item,index,arr){
-        if (item.rarity == "Epic"){
-          epic += 1;
-        }
-      });
-      return epic;
-    },
-    countLegenCards() {
-      let legend = 0;
-      this.deck.forEach(function(item,index,arr){
-        if (item.rarity == "Legendary"){
-          legend += 1;
-        }
-      });
-      return legend;
-    }
-  },
+  
   methods: {
 
     newDeck(foto) {
       this.service
-        .list()
+        .listDeck()
         .then(deck => this.deck = deck, err => this.mensagem = err.message);
     }
 
@@ -118,7 +58,7 @@ export default {
     this.service = new ClashService(this.$resource);
 
     this.service
-      .list()
+      .listDeck()
       .then(deck => this.deck = deck, err => this.mensagem = err.message);
   }
 }

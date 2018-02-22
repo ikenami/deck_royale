@@ -10,19 +10,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Deck Royale</a>
+        <router-link class="navbar-brand"  :to="'/'">
+          Deck Royale
+        </router-link>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <!-- <li v-for="route in routes">
-            <router-link :to="rota.path ? rota.path : '/'">
-              {{ route.title }}
-            </router-link>
-          </li> -->
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
           <li v-for="route in routes">
             <router-link :to="route.path ? route.path : '/'">
               {{ route.title }}

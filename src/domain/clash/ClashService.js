@@ -2,6 +2,7 @@ export default class ClashService {
 
   constructor(resource,id='') {
     this._deck_resource = resource('api/random-deck');
+    this._all_cards_resource = resource('api/cards');
 
     if(id) {
       let url = `api/cards/${id}`;
@@ -10,8 +11,16 @@ export default class ClashService {
 
   }
 
+  listCards() {
+    return this._all_cards_resource
+      .query()
+      .then(res => res.json(), err => {
+        console.log(err);
+        throw new Error('Could not retrieve the cards.');
+      });
+  }
 
-  list() {
+  listDeck() {
     return this._deck_resource
       .query()
       .then(res => res.json(), err => {

@@ -21,8 +21,11 @@
         <p class="info-text">{{card.arena}}</p>
 
         <br>
-        <router-link :to="{ name: 'home'}">
+        <router-link :to="{ name: 'home'}" v-if="this.$route.name == 'cardInfo'">
           <button type="button" class="btn btn-danger btn-lg">Back to Home</button>
+        </router-link>
+        <router-link :to="{ name: 'cards'}" v-else>
+          <button type="button" class="btn btn-danger btn-lg">Back to Cards</button>
         </router-link>
 
       </div>
