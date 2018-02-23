@@ -5,7 +5,7 @@
           <li class="list-deck-item col-md-12" v-for="arena of arenas">
             <div class="row">
               <div class="col-md-6">
-                <img :src="`http://www.clashapi.xyz/images/arenas/${arena.idName}.png`" :alt="arena.idName" style="height:auto; width:300px">
+                <img :src="`http://www.clashapi.xyz/images/arenas/${arena.idName}.png`" :alt="arena.idName" class="img-responsive center-block" style="height:auto; width:300px">
               </div>
               <div class="col-md-4">
                 <about-arenas :arena="arena"/>
