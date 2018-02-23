@@ -8,6 +8,7 @@ You can check the server used to deploy this app on Heroku [here](https://github
 * [NodeJS](https://nodejs.org/en/)
 * [npm](https://www.npmjs.com/)
 * [Vue](https://vuejs.org/)
+* [Bootstrap](https://getbootstrap.com/docs/3.3/)
 * [Clash Royale API](https://github.com/martincarrera/clash-royale-api)
 
 ## Requirements
