@@ -8,7 +8,7 @@ import './assets/css/style.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
 Vue.use(VueResource);
-Vue.http.options.root = 'www.clashapi.xyz/';
+Vue.http.options.root = 'https://cors-anywhere.herokuapp.com/http://www.clashapi.xyz/';
 
 Vue.use(VueRouter);
 
