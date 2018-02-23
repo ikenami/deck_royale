@@ -2,7 +2,9 @@
 
 > A Single Page Application using Vue that generates random Clash Royale decks using the [Clash Royale API](https://github.com/martincarrera/clash-royale-api).
 
-You can check the server used to deploy this app on Heroku [here](https://github.com/ikenami/Deck-Royale-Server).
+You can check the server used to deploy this app on Heroku [here](http://github.com/ikenami/Deck-Royale-Server).
+
+:warning: **UPDATE:** Getting an "Oooooops" error page? Try using **"http://"** instead of **"https://"** when accessing the application.
 
 ## In this project we used
 * [NodeJS](https://nodejs.org/en/)
