@@ -1,17 +1,20 @@
 <template>
   <div class="body container-fluid">
     <my-menu :routes="routes"/>
-    <router-view></router-view>
+    <router-view class="menu-fixed-top-content"></router-view>
+    <my-footer/>
   </div>
 </template>
 <script>
 import { routes } from './routes';
 import Menu from './components/shared/menu/Menu.vue';
+import Footer from './components/shared/footer/Footer.vue';
 
 export default {
 
   components: {
-    'my-menu' : Menu
+    'my-menu' : Menu,
+    'my-footer' : Footer
   },
 
   data() {
@@ -23,4 +26,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+
+.menu-fixed-top-content {
+  padding-top: 70px;
+}
+
+</style>

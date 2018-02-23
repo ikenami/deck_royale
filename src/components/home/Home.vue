@@ -51,7 +51,7 @@ export default {
     return {
       deck: [],
       elixirCost: 0,
-      hasContent: false
+      hasContent: true
     }
   },
 
@@ -62,9 +62,12 @@ export default {
     this.service
       .listDeck()
       .then(deck => {
-        this.hasContent = true;
         this.deck = deck;
-      }, err => this.mensagem = err.message);
+      }, err => {
+        this.hasContent = false;
+        this.mensagem = err.message;
+      }
+    );
   }
 }
 
