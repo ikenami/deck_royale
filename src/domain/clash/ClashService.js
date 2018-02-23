@@ -1,12 +1,12 @@
 export default class ClashService {
 
   constructor(resource,id='') {
-    this._deck_resource = resource('api/random-deck');
-    this._all_arenas_resource = resource('api/arenas');
-    this._all_cards_resource = resource('api/cards');
-    this._all_chests_resource = resource('api/chests');
-    this._all_leagues_resource = resource('api/leagues');
-    this._all_players_resource = resource('api/players');
+    this._deck_resource = resource('http://www.clashapi.xyz/api/random-deck');
+    this._all_arenas_resource = resource('http://www.clashapi.xyz/api/arenas');
+    this._all_cards_resource = resource('http://www.clashapi.xyz/api/cards');
+    this._all_chests_resource = resource('http://www.clashapi.xyz/api/chests');
+    this._all_leagues_resource = resource('http://www.clashapi.xyz/api/leagues');
+    this._all_players_resource = resource('http://www.clashapi.xyz/api/players');
 
     if(id) {
       let url = `api/cards/${id}`;
