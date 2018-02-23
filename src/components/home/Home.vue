@@ -1,12 +1,6 @@
 <template>
   <div>
-    <div class="center">
-      <div class="col-md-8">
-        <button type="button" class="btn btn-danger btn-lg" @click="newDeck()">Generate New Deck</button>
-        <br><br>
-      </div>
-    </div>
-    <div class="row">
+    <div class="row" v-if="this.hasContent">
       <div class="col-md-8">
         <ul class="list-deck row">
           <li class="list-deck-item col-md-3 col-sm-12" v-for="clash_card of deck">
@@ -18,7 +12,14 @@
       </div>
       <div class="col-md-2">
         <about-deck :deck="this.deck"/>
+        <br>
+        <button type="button" class="btn btn-danger btn-lg" @click="newDeck()">Generate New Deck</button>
       </div>
+    </div>
+    <div class="row center" v-else>
+      <h1>Ooooooops</h1>
+      <p>Something went wrong and we could not retrieve the cards from our servers.<br>
+        Please try again later.</p>
     </div>
   </div>
 </template>
@@ -34,7 +35,7 @@ export default {
     'clash-card': ClashCard,
     'about-deck': AboutDeck
   },
-  
+
   methods: {
 
     newDeck(foto) {
@@ -49,7 +50,8 @@ export default {
 
     return {
       deck: [],
-      elixirCost: 0
+      elixirCost: 0,
+      hasContent: false
     }
   },
 
@@ -59,7 +61,10 @@ export default {
 
     this.service
       .listDeck()
-      .then(deck => this.deck = deck, err => this.mensagem = err.message);
+      .then(deck => {
+        this.hasContent = true;
+        this.deck = deck;
+      }, err => this.mensagem = err.message);
   }
 }
 

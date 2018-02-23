@@ -3,12 +3,16 @@
     <div class="center">
         <ul class="list-deck row">
           <li class="list-deck-item col-md-12" v-for="arena of arenas">
-            <div class="col-md-6">
-              <img :src="`http://www.clashapi.xyz/images/arenas/${arena.idName}.png`" :alt="arena.idName">
+            <div class="row">
+              <div class="col-md-6">
+                <img :src="`http://www.clashapi.xyz/images/arenas/${arena.idName}.png`" :alt="arena.idName">
+              </div>
+              <div class="col-md-4">
+                <about-arenas :arena="arena"/>
+              </div>
             </div>
-            <div class="col-md-4">
-              <about-arenas :arena="arena"/>
-            </div>
+            <br>
+            <hr>
           </li>
         </ul>
     </div>

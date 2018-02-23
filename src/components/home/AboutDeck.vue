@@ -4,10 +4,10 @@
     <br>
     <p class="info-text"><b>Elixir Cost:</b> {{ deckElixirCost }}</p>
     <p class="info-text"><b>Deck for Arena:</b> {{ maxArena }}</p>
-    <p class="info-text"><b>Common Cards:</b> {{ countCommonCards }}</p>
-    <p class="info-text"><b>Rare Cards:</b> {{ countRareCards }}</p>
-    <p class="info-text"><b>Epic Cards:</b> {{ countEpicCards }}</p>
-    <p class="info-text"><b>Legendary Cards:</b> {{ countLegenCards }}</p>
+    <p class="info-text">It uses <b> {{ countCommonCards }} Common <span v-if="(this.countCommonCards == '1')">Card</span><span v-else>Cards</span></b></p>
+    <p class="info-text">It uses <b>{{ countRareCards }} Rare <span v-if="(this.countRareCards == '1')">Card</span><span v-else>Cards</span></b></p>
+    <p class="info-text">It uses <b>{{ countEpicCards }} Epic <span v-if="(this.countEpicCards == '1')">Card</span><span v-else>Cards</span></b></p>
+    <p class="info-text">It uses <b>{{ countLegenCards }} Legendary <span v-if="(this.countLegenCards == '1')">Card</span><span v-else>Cards</span></b></p>
   </div>
 </template>
 <script>

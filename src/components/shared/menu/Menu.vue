@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
         </button>
         <router-link class="navbar-brand"  :to="'/'">
-          Deck Royale
+          <span class="menu-title">Deck Royale</span>
         </router-link>
       </div>
 
@@ -45,4 +45,8 @@ export default {
 </script>
 
 <style>
+.menu-title{
+    font-weight: bold;
+    /* border-bottom: solid 5px red; */
+}
 </style>

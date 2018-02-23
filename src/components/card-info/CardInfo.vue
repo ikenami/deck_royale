@@ -11,7 +11,7 @@
         <p class="info-text">{{card.rarity}}</p>
         <h6 class="text-uppercase">Type</h6>
         <p class="info-text">{{card.type}}</p>
-        <h6 class="text-uppercase">Name:</h6>
+        <h6 class="text-uppercase">Name</h6>
         <p class="info-text">{{card.name}}</p>
         <h6 class="text-uppercase">Description</h6>
         <p class="info-text">{{card.description}}</p>
