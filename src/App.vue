@@ -30,6 +30,7 @@ export default {
 
 .menu-fixed-top-content {
   padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 </style>
