@@ -9,7 +9,7 @@ export default class ClashService {
     this._all_players_resource = resource('http://www.clashapi.xyz/api/players');
 
     if(id) {
-      let url = `api/cards/${id}`;
+      let url = `http://www.clashapi.xyz/api/cards/${id}`;
       this._card_resource = resource(url);
     }
 
