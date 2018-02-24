@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-2 col-md-offset-1">
+      <div class="col-xl-2 col-md-2 col-sm-12 right">
         <img :src="`http://www.clashapi.xyz/images/cards/${card.idName}.png`" >
       </div>
-      <div class="col-md-8 ">
+      <div class="col-xl-8 col-md-8 col-sm-12">
         <h1><span class="info-title" :class="rarityStyle">{{card.name}}</span></h1>
         <br>
         <h6 class="text-uppercase">Rarity</h6>

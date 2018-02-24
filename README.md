@@ -43,7 +43,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 `src\routes` - Where we manage our application Routes (which template is used in which path).
 
-`main.js` - Where we import the modules that our application uses, and configure them(the modules).
+`src\main.js` - Where we import the modules that our application uses, and configure them(the modules).
 
 `package.json` - Has all the info needed by Node about the project.
 
