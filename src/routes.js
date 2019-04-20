@@ -1,10 +1,10 @@
-const Info = () => System.import('./components/card-info/CardInfo.vue');
-const Cards = () => System.import('./components/cards/Cards.vue');
-const Arenas = () => System.import('./components/arenas/Arenas.vue');
+// const Info = () => import('./components/card-info/CardInfo.vue');
+// const Cards = () => import('./components/cards/Cards.vue');
+// const Arenas = () => import('./components/arenas/Arenas.vue');
 import Home from './components/home/Home.vue';
-// import Arenas from './components/arenas/Arenas.vue';
-// import Cards from './components/cards/Cards.vue';
-// import Info from './components/card-info/CardInfo.vue';
+import Arenas from './components/arenas/Arenas.vue';
+import Cards from './components/cards/Cards.vue';
+import Info from './components/card-info/CardInfo.vue';
 
 export const routes = [
     { path: '', name: 'home', component: Home, title: 'Home', menu: true},
