@@ -4,9 +4,10 @@
 
 You can check the server used to deploy this app on Heroku [here](http://github.com/ikenami/Deck-Royale-Server).
 
-:warning: **UPDATE:** Getting an "Oooooops" error page? Try using **"http://"** instead of **"https://"** when accessing the application.
+:warning: **UPDATE:** Getting an "Oooooops" error page? Try using `http://` instead of `https://` when accessing the application.
 
 ## In this project we used
+
 * [NodeJS](https://nodejs.org/en/)
 * [npm](https://www.npmjs.com/)
 * [Vue](https://vuejs.org/)
@@ -19,20 +20,21 @@ You can check the server used to deploy this app on Heroku [here](http://github.
 
 ## Build Setup
 
-``` bash
-# install dependencies
-npm install
+```bash
+# Install dependencies
+> npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# Serve with hot reload at localhost:8080
+> npm run dev
 
-# build for production with minification
-npm run build
+# Build for production with minification
+> npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## About the Project Files
+
 `src\domain\clash\ClashServices.js` - Where we are requesting the Clash Royale API for data and returning JSON objects.
 
 `src\components` - Where we saved all the templates.
@@ -47,18 +49,22 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 `package.json` - Has all the info needed by Node about the project.
 
-
 ## Modules Used
+
 ### Vue Resource
+
 We used the [Vue Resource](https://www.npmjs.com/package/vue-resource) module so we could consume the Clash Royale API that follows the REST pattern.
 
 ### Vue Router
+
 We used the [Vue Router](https://www.npmjs.com/package/vue-router) module so we could define the application routes, making it easy to bing the content with the url path.
 
 ### Boostrap
+
 We used the [Bootstrap v3.3.7](https://www.npmjs.com/package/bootstrap) module to style our application.
 
 ## Consuming API
+
 In this project we are consuming the data from the [Clash Royale API](https://github.com/martincarrera/clash-royale-api).
 
 ----------
